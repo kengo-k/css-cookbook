@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- 4で1rem。1remは1文字分を表す -->
+  <!-- spanはインライン要素なのでm-8で全方向にマージンを入れているが実際はx方向のみにしか適用されない -->
+  <span class="border border-red-500 m-8">this is a span tag</span>
+  <span class="border border-red-500 p-12">span is inline element</span>
+
+  <p class="border border-blue-500 mt-16">p is a paragraph.</p>
+  <p class="border border-blue-500 m-8 p-8">p is a paragraph.</p>
+  <p class="border border-blue-500 mx-16">p is a paragraph.</p>
+
+  <p class="border border-green-500 mt-16">
+    p is a paragraph
+    <span class="border border-green-500 m-8">this is a span tag in paragraph</span>
+    <span class="border border-green-500 p-12">this is a span tag in paragraph</span>
+  </p>
+
+  <!-- flexboxを使ってdivを横並べにする -->
+  <div class="border border-pink-500 flex justify-around mt-16">
+    parent div 
+    <div class="border border-pink-500 mt-4">child div1</div>
+    <div class="border border-pink-500">child div2</div>
+  </div>
+</body>
+</html>
