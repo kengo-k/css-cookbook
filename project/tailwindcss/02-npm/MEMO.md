@@ -8,3 +8,7 @@
 npx tailwindcss init
 ```
 initに続けて--fullオプションをつけるとデフォルト設定をすべて含んだバージョンが生成されるので参考になる
+
+## 各種プラグイン等
+### tailwind CSS IntelliSense
+VSCode用プラグイン
