@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+  <h1 class="mt-8">overflow:hiddenではみ出した部分を消す(対応前)</h1>
+  <div class="w-20 h-20 border-2">
+    はみ出した文字を表示させないテスト
+  </div>
+
+  <h1 class="mt-8">overflow:hiddenではみ出した部分を消す(対応後)</h1>
+  <div class="w-20 h-20 border-2 overflow-hidden">
+    はみ出した文字を表示させないテスト
+  </div>
+
+  <h1 class="mt-8">角丸対応によりはみ出た部分を消す</h1>
+  <div class="w-40 rounded-full overflow-hidden">
+    <img src="images/img1.jpg" />
+  </div>
+</body>
+</html>
