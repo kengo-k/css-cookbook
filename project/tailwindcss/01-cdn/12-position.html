@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+  <h1 class="mt-4">文字の位置を移動して画像の上に配置する(対応前)</h1>
+  <div>
+    <img src="images/img1.jpg" class="w-96" />
+    <span>文字を重ねるテスト</span>
+  </div>
+  通常imgタグはブロック要素なので文字は改行されてしまう。
+
+  <!-- 親にrelative、子供にabsoluteをつけることで親の基準位置から始まる→文字が重なる -->
+  <h1 class="mt-4">文字の位置を移動して画像の上に配置する(対応後)</h1>
+  <div class="relative">
+    <img src="images/img1.jpg" class="w-96 absolute" />
+    <!-- 基準位置からtop-やleft-を使いさらに調整する -->
+    <span class="absolute top-16 left-16">文字を重ねるテスト</span>
+  </div>
+
+  <!-- mt-を入れないと上の画像に重なってしまう。なぜならば上の画像を囲っているdivに高さがないため -->
+  <div class="mt-72 relative w-96 h-60 bg-red-400">
+    <div class="absolute w-40 h-40 top-8 left-8 bg-blue-300"></div>
+    <div class="absolute w-40 h-40 top-16 left-16 bg-blue-500"></div>
+  </div>
+
+  <!-- 戻るボタンを画面右下に固定で表示 -->
+  <div class="fixed bottom-8 right-8">戻るボタン</div>
+  <!-- stickyはfixとは違い画面に表示された段階で画面最上部に固定される -->
+  <div class="sticky top-0 p-2 bg-green-300">sticky1</div>
+  <div class="h-96">あいうえお</div>
+  <div class="h-96">あいうえお</div>
+
+  <!-- 画面をさらにスクロールしていくとsticky2がsticky1にとってかわる -->
+  <div class="sticky top-0 p-2 bg-green-300">sticky2</div>
+  <div class="h-96">あいうえお</div>
+  <div class="h-96">あいうえお</div>
+  <div class="h-96">あいうえお</div>
+  <div class="h-96">あいうえお</div>
+
+
+
+</body>
+</html>
