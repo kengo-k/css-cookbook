@@ -1,13 +1,29 @@
+import fs from "fs";
+import path from "path";
 import "../app/globals.css";
 
-function Hello() {
+function Hello({ items }) {
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-100">
-      <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">
-        Hello World!
-      </button>
+    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+      {" "}
+      <div>
+        <h1>List of items</h1>
+        <ul>
+          {items.map((item) => (
+            <li key={item.id}>{item.title}</li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
+}
+
+export async function getServerSideProps() {
+  const jsonFilePath = path.join(process.cwd(), "data", "data.json");
+  const jsonString = fs.readFileSync(jsonFilePath, "utf8");
+  const items = JSON.parse(jsonString);
+
+  return { props: { items } };
 }
 
 export default Hello;
