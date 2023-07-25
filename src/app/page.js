@@ -19,7 +19,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main>
+    <main className="max-w-7xl mx-auto">
       <div className="flex justify-between">
         <div className="bg-gray-200 p-2 m-2">1</div>
         <div className="bg-gray-200 p-2 m-2">2</div>
