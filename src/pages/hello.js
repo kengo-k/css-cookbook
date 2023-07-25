@@ -1,11 +1,12 @@
 import fs from "fs";
 import path from "path";
 import "../app/globals.css";
+import Header from "../components/Header";
 
 function Hello({ items }) {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
-      {" "}
+      <Header />{" "}
       <div>
         <h1>List of items</h1>
         <ul>
