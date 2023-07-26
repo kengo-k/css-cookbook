@@ -1,21 +1,10 @@
 "use client";
 
-import { HighlightedSource } from "@/components/HighlightedSource";
+import Showcase from "@/components/common/Showcase";
 import "prism-themes/themes/prism-ghcolors.css";
 import Prism from "prismjs";
 import "prismjs/components/prism-css.min.js";
 import { useEffect } from "react";
-
-const Showcase = ({ title, item }) => {
-  const { Component, code, lang } = item;
-  return (
-    <>
-      <div>{title}</div>
-      <Component />
-      <HighlightedSource code={code} lang={lang} />
-    </>
-  );
-};
 
 const MarginSample1 = {
   Component: () => {
