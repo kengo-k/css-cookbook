@@ -20,8 +20,8 @@ const Showcase: FC<ShowcaseProps> = ({ title, item }) => {
   const { Component, code, lang } = item;
   return (
     <>
-      <span>{title}</span>
-      <figure className="border-2 border-gray-50 bg-gray-50 rounded-lg p-4">
+      <span className="mt-6 inline-block">{title}</span>
+      <figure className="border-2 border-gray-50 bg-gray-50 rounded-lg p-4 font-serif">
         <Component />
         <HighlightedSource code={code} lang={lang} />
       </figure>
