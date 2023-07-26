@@ -1,4 +1,4 @@
-import { HighlightedSource } from "@/components/HighlightedSource";
+import { HighlightedSource } from "@/components/common/HighlightedSource";
 import { FC } from "react";
 
 export interface ShowcaseItem {
