@@ -6,6 +6,33 @@ import Prism from "prismjs";
 import "prismjs/components/prism-css.min.js";
 import { useEffect } from "react";
 
+const MarginExsampleGoal = createShowcaseItem({
+  Component: () => {
+    return (
+      <div className="bg-gray-200">
+        <header className="text-gray-600 body-font">
+          <div className="mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+              <span className="ml-3 text-xl">My Awesome Site</span>
+            </a>
+            <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
+              <a className="mr-5 hover:text-gray-900">Link1</a>
+              <a className="mr-5 hover:text-gray-900">Link2</a>
+              <a className="mr-5 hover:text-gray-900">Link3</a>
+              <a className="mr-5 hover:text-gray-900">Link4</a>
+            </nav>
+            <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
+              Login
+            </button>
+          </div>
+        </header>
+      </div>
+    );
+  },
+  code: `<div class="bg-gray-200 p-2 my-2">Lorem ipsum</div>`,
+  lang: "html",
+});
+
 const MarginSample1 = createShowcaseItem({
   Component: () => {
     return <div className="bg-gray-200 p-2 my-2">Lorem ipsum</div>;
@@ -42,6 +69,21 @@ const MarginSample4 = createShowcaseItem({
   lang: "html",
 });
 
+const FlexExample1 = createShowcaseItem({
+  Component: () => {
+    return (
+      <nav className="">
+        <a className="border border-gray-500 py-1 px-2 m-2">Link1</a>
+        <a className="border border-gray-500 py-1 px-2 m-2">Link2</a>
+        <a className="border border-gray-500 py-1 px-2 m-2">Link3</a>
+        <a className="border border-gray-500 py-1 px-2 m-2">Link4</a>
+      </nav>
+    );
+  },
+  code: `<div className="bg-gray-200 p-2 my-2 w-1/2 ml-auto">Lorem ipsum</div>`,
+  lang: "html",
+});
+
 export default function Home() {
   useEffect(() => {
     Prism.highlightAll();
@@ -49,10 +91,25 @@ export default function Home() {
 
   return (
     <main className="container mx-auto">
+      <h2 className="text-xl">Implement Header Menu</h2>
+      <p>
+        In this chapter, we will start with the minimal code and gradually flesh
+        it out to understand how to implement the header menu shown below.
+      </p>
+      <Showcase item={MarginExsampleGoal} showCode={false} />
+
       <h2>Basics of margin</h2>
+      <p>
+        As a prerequisite, you will understand how to use margin for centering
+        and aligning to the left or right.
+      </p>
       <section>
         <div>
-          <Showcase title={"Step1: Initial div"} item={MarginSample1} />
+          <Showcase
+            title={"Step1: Initial div"}
+            item={MarginSample1}
+            showCode={true}
+          />
           <article className="mt-6">
             This is the most basic div. A background color is set to visually
             understand the area occupied by the div. From this example, it is
@@ -61,14 +118,22 @@ export default function Home() {
         </div>
 
         <div>
-          <Showcase title={"Step2: Add w-1/2"} item={MarginSample2} />
+          <Showcase
+            title={"Step2: Add w-1/2"}
+            item={MarginSample2}
+            showCode={true}
+          />
           <article className="mt-6">
             By specifying w-1/2, the width of the area becomes half.
           </article>
         </div>
 
         <div>
-          <Showcase title={"Step3: Align to center"} item={MarginSample3} />
+          <Showcase
+            title={"Step3: Align to center"}
+            item={MarginSample3}
+            showCode={true}
+          />
           <article className="mt-6">
             By specifying mx-auto, the area occupied by the element is centered.
           </article>
@@ -79,6 +144,26 @@ export default function Home() {
           <article className="mt-6">
             By specifying ml-auto, the area occupied by the element is
             right-aligned.
+          </article>
+        </div>
+      </section>
+
+      <h2>Basics of Flex layout</h2>
+      <p>
+        As a prerequisite, you will understand how to use margin for centering
+        and aligning to the left or right.
+      </p>
+      <section>
+        <div>
+          <Showcase
+            title={"Step1: Initial div"}
+            item={FlexExample1}
+            showCode={true}
+          />
+          <article className="mt-6">
+            This is the most basic div. A background color is set to visually
+            understand the area occupied by the div. From this example, it is
+            clear that the div occupies the full width.
           </article>
         </div>
       </section>

@@ -12,18 +12,19 @@ export const createShowcaseItem = (item: ShowcaseItem): ShowcaseItem => {
 };
 
 export interface ShowcaseProps {
-  title: string;
+  title?: string;
   item: ShowcaseItem;
+  showCode?: boolean;
 }
 
-const Showcase: FC<ShowcaseProps> = ({ title, item }) => {
+const Showcase: FC<ShowcaseProps> = ({ title, item, showCode }) => {
   const { Component, code, lang } = item;
   return (
     <>
-      <span className="mt-6 inline-block">{title}</span>
+      {title && <span className="mt-6 inline-block">{title}</span>}
       <figure className="border-2 border-gray-50 bg-gray-50 rounded-lg p-4 font-serif">
         <Component />
-        <HighlightedSource code={code} lang={lang} />
+        {showCode && <HighlightedSource code={code} lang={lang} />}
       </figure>
     </>
   );
