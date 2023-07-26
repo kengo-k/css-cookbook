@@ -1,11 +1,15 @@
 import { HighlightedSource } from "@/components/common/HighlightedSource";
 import { FC } from "react";
 
-export interface ShowcaseItem {
+interface ShowcaseItem {
   Component: React.FC;
   code: string;
   lang: string;
 }
+
+export const createShowcaseItem = (item: ShowcaseItem): ShowcaseItem => {
+  return { Component: item.Component, code: item.code, lang: item.lang };
+};
 
 export interface ShowcaseProps {
   title: string;

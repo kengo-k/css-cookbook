@@ -1,18 +1,18 @@
 "use client";
 
-import Showcase from "@/components/common/Showcase";
+import Showcase, { createShowcaseItem } from "@/components/common/Showcase";
 import "prism-themes/themes/prism-ghcolors.css";
 import Prism from "prismjs";
 import "prismjs/components/prism-css.min.js";
 import { useEffect } from "react";
 
-const MarginSample1 = {
+const MarginSample1 = createShowcaseItem({
   Component: () => {
     return <div className="bg-gray-200 p-2 my-2">Lorem ipsum</div>;
   },
   code: `<div class="bg-gray-200 p-2 my-2">Lorem ipsum</div>`,
   lang: "html",
-};
+});
 
 export default function Home() {
   useEffect(() => {
