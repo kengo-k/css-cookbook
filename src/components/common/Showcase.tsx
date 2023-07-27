@@ -21,8 +21,8 @@ const Showcase: FC<ShowcaseProps> = ({ title, item, showCode }) => {
   const { Component, code, lang } = item;
   return (
     <>
-      {title && <span className="mt-6 inline-block">{title}</span>}
-      <figure className="border-2 border-gray-50 bg-gray-50 rounded-lg p-4 font-serif">
+      {title && <span className="mt-2 inline-block">{title}</span>}
+      <figure className="border-2 border-dashed border-gray-200 bg-gray-50 rounded-lg p-4 font-serif">
         <Component />
         {showCode && <HighlightedSource code={code} lang={lang} />}
       </figure>
