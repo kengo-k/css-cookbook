@@ -36,9 +36,10 @@ interface Props {
   title: string
   Component: React.FC
   showCode: boolean
+  children?: React.ReactNode
 }
 
-export const Showcase2 = (props: Props) => {
+export const Showcase2: React.FC<Props> = (props: Props) => {
   const { Component, title, showCode } = props
   const code = clean(Component) ?? ''
   return (
@@ -48,6 +49,7 @@ export const Showcase2 = (props: Props) => {
         <Component />
         {showCode && <HighlightedSource code={code} lang="html" />}
       </figure>
+      <article className="mt-4">{props.children}</article>
     </>
   )
 }
