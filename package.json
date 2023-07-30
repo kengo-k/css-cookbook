@@ -11,9 +11,12 @@
   "dependencies": {
     "@prettier/sync": "^0.3.0",
     "autoprefixer": "10.4.14",
+    "clean-html": "^2.0.1",
+    "html-prettify": "^1.0.7",
     "next": "13.4.12",
     "postcss": "8.4.27",
     "prettier": "^3.0.0",
+    "pretty": "^2.0.0",
     "prism-themes": "^1.9.0",
     "prismjs": "^1.29.0",
     "react": "18.2.0",
