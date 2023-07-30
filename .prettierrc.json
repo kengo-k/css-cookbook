@@ -1,0 +1,13 @@
+{
+  "importOrder": [
+    "^((react)|(next))(.*)$",
+    "^@[^/](.*)$",
+    "^@/(.*)$",
+    "^(.*)$"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "singleQuote": true,
+  "semi": false,
+  "plugins": ["@trivago/prettier-plugin-sort-imports"]
+}
