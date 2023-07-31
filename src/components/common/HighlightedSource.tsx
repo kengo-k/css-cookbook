@@ -1,4 +1,4 @@
-export interface Props {
+interface Props {
   lang: string
   code: string
 }
@@ -9,8 +9,4 @@ export const HighlightedSource = (props: Props) => {
       <code className={`language-${props.lang}`}>{props.code}</code>
     </pre>
   )
-}
-
-export const init = (component: React.FC) => {
-  return { Component: component, code: '', lang: '' }
 }

@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 
 import { Section } from '@/components/common/Section'
-import { Showcase2 } from '@/components/common/Showcase'
+import { Showcase } from '@/components/common/Showcase'
 import { Flex1, Flex2, Flex3, Margin1, Margin2, Margin3, Margin4, MenuExampleGoal } from '@/components/examples/menus'
 import { andada_pro } from '@/utils/fonts'
 
@@ -31,39 +31,39 @@ export default function Home() {
         the header menu shown below.
       </p>
 
-      <Showcase2 title="" component={MenuExampleGoal} showCode={true} />
+      <Showcase title="" component={MenuExampleGoal} showCode={true} />
 
       <Section
         title="Basics of margin"
         description="As a prerequisite, you will understand how to use margin for centering and aligning to the left or right."
       >
-        <Showcase2 title={'Step1: Initial div'} component={Margin1} showCode={true}>
+        <Showcase title={'Step1: Initial div'} component={Margin1} showCode={true}>
           This is the most basic div. A background color is set to visually understand the area occupied by the div.
           From this example, it is clear that the div occupies the full width.
-        </Showcase2>
+        </Showcase>
 
-        <Showcase2 title={'Step2: Add w-1/2'} component={Margin2} showCode={true}>
+        <Showcase title={'Step2: Add w-1/2'} component={Margin2} showCode={true}>
           By specifying w-1/2, the width of the area becomes half.
-        </Showcase2>
+        </Showcase>
 
-        <Showcase2 title={'Step3: Align to center'} component={Margin3} showCode={true}>
+        <Showcase title={'Step3: Align to center'} component={Margin3} showCode={true}>
           By specifying mx-auto, the area occupied by the element is centered.
-        </Showcase2>
+        </Showcase>
 
-        <Showcase2 title={'Step4: Align to left'} component={Margin4} showCode={true}>
+        <Showcase title={'Step4: Align to left'} component={Margin4} showCode={true}>
           By specifying ml-auto, the area occupied by the element is right-aligned.
-        </Showcase2>
+        </Showcase>
       </Section>
 
       <Section
         title="Basics of Flex layout"
         description="By using flex, you can allocate elements within a block at equal intervals."
       >
-        <Showcase2 title={'Step1: Initial menu items'} component={Flex1} showCode={true}>
+        <Showcase title={'Step1: Initial menu items'} component={Flex1} showCode={true}>
           This is the layout before applying flex. The link elements are aligned to the left within the block.
-        </Showcase2>
+        </Showcase>
 
-        <Showcase2 title={'Step2: Apply flex layout'} component={Flex2} showCode={true}>
+        <Showcase title={'Step2: Apply flex layout'} component={Flex2} showCode={true}>
           Added the classes `flex`, `flex-row`, `items-center` and `justify-center` to the nav element. The meanings of
           each class are as follows:
           <ul className="list-disc list-inside p-4">
@@ -75,11 +75,11 @@ export default function Home() {
             </li>
             <li>`items-center`: Centers the children along the cross axis. In this case, it's the vertical axis.</li>
           </ul>
-        </Showcase2>
+        </Showcase>
 
-        <Showcase2 title={'Step3: Align the navigation links to the right'} component={Flex3} showCode={true}>
+        <Showcase title={'Step3: Align the navigation links to the right'} component={Flex3} showCode={true}>
           todo
-        </Showcase2>
+        </Showcase>
       </Section>
     </main>
   )
