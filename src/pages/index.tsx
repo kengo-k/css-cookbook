@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 
+import '@/app/globals.scss'
 import { Section } from '@/components/common/Section'
 import { Showcase } from '@/components/common/Showcase'
 import { Flex1, Flex2, Flex3, Margin1, Margin2, Margin3, Margin4, MenuExampleGoal } from '@/components/examples/menus'
